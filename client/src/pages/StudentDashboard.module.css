@@ -1,0 +1,272 @@
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  animation: fadeUp 0.4s ease both;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  padding: 1.8rem;
+  background: var(--accent);
+  border-radius: 20px;
+  color: #fff;
+}
+.heroText h1 { font-size: 2.6rem; line-height: 1; color: #fff; margin: 0.3rem 0; }
+.heroText p { color: rgba(255,255,255,0.75); font-size: 0.88rem; }
+.greet { font-size: 0.72rem; color: rgba(255,255,255,0.7); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.badge { font-size: 3.5rem; line-height: 1; }
+
+/* Stats strip */
+.statsStrip {
+  display: flex;
+  align-items: center;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+  gap: 0;
+}
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+}
+.statVal { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1; color: var(--text); }
+.statLbl { font-size: 0.68rem; color: var(--text2); margin-top: 0.15rem; letter-spacing: 0.04em; }
+.statDivider { width: 1px; height: 36px; background: var(--border); margin: 0 1rem; flex-shrink: 0; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.3rem;
+  box-shadow: var(--shadow);
+}
+.tab {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: calc(var(--radius) - 4px);
+  background: transparent;
+  color: var(--text2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.tab.active { background: var(--accent); color: #fff; }
+.tabBadge {
+  background: rgba(255,255,255,0.25);
+  color: inherit;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100px;
+}
+.tab.active .tabBadge { background: rgba(255,255,255,0.3); }
+
+/* Book card */
+.bookCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: var(--shadow);
+  animation: fadeUp 0.4s ease both;
+}
+
+.sectionLabel {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: -0.4rem;
+}
+
+/* Route builder */
+.routeWrap { display: flex; flex-direction: column; }
+.routeRow { display: flex; align-items: center; gap: 0.8rem; }
+.routeRail { display: flex; flex-direction: column; align-items: center; width: 24px; flex-shrink: 0; }
+.routeRailLine { width: 2px; height: 18px; background: var(--border-bright); }
+.routeDot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+/* Fare row */
+.fareRow { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.fareBox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gold-dim);
+  border: 1px solid rgba(196,146,42,0.2);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.routeSummary { font-size: 0.78rem; color: var(--text2); font-style: italic; }
+
+/* Book button */
+.bookBtn {
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+}
+.bookBtn:hover:not(:disabled) { background: var(--accent2); transform: translateY(-1px); box-shadow: var(--shadow-accent); }
+.bookBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Confirmation */
+.confirmation {
+  background: var(--accent-dim);
+  border: 1px solid rgba(139,26,26,0.15);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+  animation: fadeIn 0.4s ease;
+}
+.confirmHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.bookingId { font-size: 0.72rem; color: var(--text3); font-weight: 400; font-family: monospace; }
+.confirmRoute { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text2); margin-bottom: 0.4rem; }
+.confirmNote { font-size: 0.78rem; color: var(--text2); margin-bottom: 0.8rem; }
+.statusBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg2);
+  border: 1px solid var(--border-bright);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+}
+.statusBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Driver card */
+.driverWaiting {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text2);
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+}
+.driverCard {
+  margin-top: 0.8rem;
+  background: var(--bg2);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.driverCardTitle {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.driverRow { display: flex; align-items: center; gap: 0.5rem; font-size: 0.84rem; color: var(--text2); }
+.driverRow strong { color: var(--text); }
+
+/* Recent rides in book tab */
+.recentWrap {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.recentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.recentRow:last-child { border-bottom: none; }
+.recentRoute {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text2);
+}
+
+/* History tab */
+.historyWrap { display: flex; flex-direction: column; gap: 0.8rem; animation: fadeUp 0.4s ease both; }
+.historyMeta { font-size: 0.78rem; color: var(--text2); padding: 0 0.2rem; }
+.empty {
+  text-align: center;
+  color: var(--text2);
+  padding: 3rem;
+  background: var(--bg2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.rideCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.rideCardTop { display: flex; align-items: center; justify-content: space-between; }
+.rideNum { font-size: 0.72rem; color: var(--text3); font-family: monospace; }
+.rideRoute { display: flex; align-items: center; gap: 0.45rem; font-size: 0.88rem; }
+.rideFooter { display: flex; align-items: center; gap: 0.8rem; }
+.rideFare { font-family: var(--font-display); font-weight: 800; color: var(--gold); }
+.rideStatus {
+  font-size: 0.68rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+}
+.accepted { background: rgba(26,120,60,0.1); color: #1a783c; border: 1px solid rgba(26,120,60,0.2); }
+.pending { background: rgba(196,146,42,0.1); color: var(--gold); border: 1px solid rgba(196,146,42,0.2); }

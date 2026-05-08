@@ -1,0 +1,97 @@
+.page { max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem 4rem; animation: fadeUp 0.4s ease both; }
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  padding: 1.8rem;
+  background: var(--accent);
+  border-radius: 20px;
+  color: #fff;
+}
+.greet { font-size: 0.7rem; color: rgba(255,255,255,0.7); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 0.3rem; }
+.hero h1 { font-size: 2rem; color: #fff; }
+.hero p { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 0.2rem; }
+.bigIcon { font-size: 3rem; }
+
+/* Stats strip */
+.statsStrip {
+  display: flex;
+  align-items: center;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+}
+.statItem { display: flex; align-items: center; gap: 0.6rem; flex: 1; }
+.statVal { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1; color: var(--text); }
+.statLbl { font-size: 0.68rem; color: var(--text2); margin-top: 0.15rem; }
+.statDivider { width: 1px; height: 36px; background: var(--border); margin: 0 1rem; flex-shrink: 0; }
+
+/* Tabs */
+.tabs {
+  display: flex; gap: 0.4rem; margin-bottom: 1.2rem;
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.3rem; box-shadow: var(--shadow);
+}
+.tab {
+  flex: 1; padding: 0.6rem 1rem; border-radius: calc(var(--radius) - 4px);
+  background: transparent; color: var(--text2); font-family: var(--font-display); font-weight: 700; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+}
+.tab.active { background: var(--accent); color: #fff; }
+.badge {
+  background: #c0392b; color: white; font-size: 0.65rem; font-weight: 800;
+  min-width: 18px; height: 18px; padding: 0 4px; border-radius: 100px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* List */
+.list { display: flex; flex-direction: column; gap: 0.8rem; animation: fadeIn 0.3s ease; }
+.listHeader { display: flex; align-items: center; justify-content: space-between; }
+.listMeta { font-size: 0.78rem; color: var(--text2); }
+
+.empty {
+  text-align: center; color: var(--text2); padding: 3rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
+  background: var(--bg2); border-radius: var(--radius); border: 1px solid var(--border);
+}
+.refreshBtn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: var(--bg3); border: 1px solid var(--border); color: var(--text2);
+  padding: 0.4rem 0.9rem; border-radius: var(--radius-sm);
+  font-family: var(--font-display); font-weight: 700; font-size: 0.75rem;
+}
+.refreshBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Cards */
+.card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.75rem;
+  box-shadow: var(--shadow); transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--border-bright); }
+.done { opacity: 0.65; }
+
+.cardTop { display: flex; align-items: center; justify-content: space-between; }
+.routeInfo { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-size: 0.88rem; font-weight: 500; }
+.locPin { display: flex; align-items: center; gap: 0.3rem; }
+.fare { font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--gold); }
+
+.cardMeta { display: flex; align-items: center; gap: 0.6rem; }
+.cardId { font-size: 0.72rem; color: var(--text3); font-family: monospace; }
+.newBadge {
+  font-size: 0.62rem; font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em;
+  background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(139,26,26,0.2);
+  padding: 0.15rem 0.5rem; border-radius: 100px;
+}
+
+.acceptBtn {
+  background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 800;
+  font-size: 0.9rem; padding: 0.75rem; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 44px;
+}
+.acceptBtn:hover:not(:disabled) { background: var(--accent2); transform: translateY(-1px); box-shadow: var(--shadow-accent); }
+.acceptBtn:disabled { opacity: 0.6; cursor: not-allowed; }
